@@ -56,3 +56,19 @@ INSERT INTO  MEMBER (M_ID,M_NAME,M_AGE,M_PHONE,M_DATE);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
