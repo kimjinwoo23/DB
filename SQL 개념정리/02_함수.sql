@@ -164,6 +164,21 @@ FROM EMPLOYEE;
 SELECT ROUND(AVG(SALARY))
 FROM EMPLOYEE;
 
+--TRUNC 버림
+SELECT TRUNC(AVG(SALARY))
+FROM EMPLOYEE;
+
+--FLOOR TRUNC 차이 
+--1)FLOOR : 주어진 숫자보다 작거나 가장 큰 정수를 반환 
+--소수부분은 무조건 버림 
+SELECT FLOOR(5.7)FROM DUAL;
+SELECT FLOOR(-5.7)FROM DUAL;
+
+---2)TRUNC : 숫자의 소수점을 잘라내는 역활 
+--자르고자 하는 자릿수를 지정 지정하지않으면 기본값 0
+SELECT TRUNC(5.7)FROM DUAL;
+SELECT TRUNC(-5.7)FROM DUAL;
+SELECT TRUNC(5.789,1)FROM DUAL;
 
 /*
 ***** TRIM  *****
