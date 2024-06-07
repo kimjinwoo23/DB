@@ -287,6 +287,46 @@ CREATE TABLE 자식테이블(
 
 
 
+--5.check 제약조건 : 컬럼에 기록되는 값에 조건을 설정가능 
+--check (컬럼명 비교연산자 비교값) 
+--비교값은 변하는 값이나 함수사용불가 
+
+CREATE TABLE USER_CHECK (
+USER_NO NUMBER PRIMARY KEY,
+USER_ID VARCHAR2(20) UNIQUE,
+USER_PW VARCHAR2(30) NOT NULL,
+USER_NAME VARCHAR2(30),
+
+GENDER VARCHAR2(10) CHECK(GENDER IN ('남','여'))
+
+);
+
+INSERT INTO USER_CHECK 
+VALUES(1,'user01','pw01','홍','남');
+
+INSERT INTO USER_CHECK
+VALUES(2,'user02','pw02','홍홍','여');
+
+--1. 따로 index에 기록하지않고 조건설정만할때 
+--컬럼명 자료형 check(컬럼명 in('조건1','조건2');
+
+--1. 따로 index에 기록한다음 조건설정한 경우(한 줄 작성) 
+--컬럼명 자료형 constraint 인덱스의 기록할이름 check(컬럼명 in('조건1','조건2');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
